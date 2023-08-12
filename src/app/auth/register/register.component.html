@@ -11,6 +11,7 @@
             action="#"
             (ngSubmit)="crearUsuario()"
           >
+            <!-- Nombre -->
             <div class="form-group">
               <div class="input-group">
                 <input
@@ -29,6 +30,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Correo -->
             <div class="form-group">
               <div class="input-group">
                 <input
@@ -47,6 +50,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Contraseña -->
             <div class="form-group">
               <div class="input-group">
                 <input
@@ -66,6 +71,7 @@
               </div>
             </div>
 
+            <!-- Sign Up button -->
             <div class="form-group">
               <button
                 type="submit"
@@ -76,9 +82,9 @@
               </button>
             </div>
             <div class="text-block text-center my-3">
-              <span class="text-small font-weight-semibold"
-                >ya tienes una cuenta?</span
-              >
+              <span class="text-small font-weight-semibold">
+                ya tienes una cuenta?
+              </span>
               <br />
               <a routerLink="/login" class="text-black text-small">Login</a>
             </div>
