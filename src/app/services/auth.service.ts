@@ -8,7 +8,7 @@ import {
   signOut,
   User,
 } from '@angular/fire/auth';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -30,5 +30,12 @@ export class AuthService {
 
   logout(): Promise<void> {
     return signOut(this.auth);
+  }
+
+  isAuth(): Observable<boolean> {
+    return new Observable((subscriber) => {
+      const unsubscribe = this.auth.onAuthStateChanged(subscriber);
+      return { unsubscribe };
+    }).pipe(map((fuser) => fuser !== null));
   }
 }
