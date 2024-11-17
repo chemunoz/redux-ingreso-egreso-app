@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "redux-ingreso-egreso-app:build:production"
+              "buildTarget": "redux-ingreso-egreso-app:build:production"
             },
             "development": {
-              "browserTarget": "redux-ingreso-egreso-app:build:development"
+              "buildTarget": "redux-ingreso-egreso-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "redux-ingreso-egreso-app:build"
+            "buildTarget": "redux-ingreso-egreso-app:build"
           }
         },
         "test": {
